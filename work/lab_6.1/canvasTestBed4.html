@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas Test Bed</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <style type="text/css">
+            #testCanvas {
+                background-color: silver;
+                margin: 30px;
+            }
+            body {
+                text-align: center;
+                color: silver;
+                background-color: rgb(53, 66, 29);
+            }
+        </style>
+        <script>
+            window.addEventListener("load", function () {
+                let c = document.getElementById("testCanvas");
+                let ctx = c.getContext("2d");
+                ctx.strokeStyle = "#0000FF";
+                ctx.lineWidth = 5;
+
+                let housewidth = 40,
+                    househeight = 20;
+                let house_x = 25,
+                    house_y = parseInt(c.height) - 200;
+                let counter2 = 0;
+                let house_colour = "rgb(250,90,0)";
+
+                let car_x = house_x,
+                    car_y = house_y + househeight + 20;
+                let carwidth = 30,
+                    carheight = 10;
+                let wheel_rad = 3;
+                let car_colour = "#0000FF";
+
+                let star_x = 20,
+                    star_y = 15;
+                let starfield_min_x = 20,
+                    starfield_max_x = parseInt(c.width) - 20;
+                let starfield_min_y = 15,
+                    starfield_max_y = house_y - 50;
+                let star_colour = "rgb(200,180,0)";
+
+                let buttons = [];
+                for (let i = 1; i <= 4; i++) {
+                    buttons[i] = document.getElementById(i);
+                }
+                buttons[1].disabled = true;
+
+                buttons[2].addEventListener("click", function (event) {
+                    if (counter2 < 5) {
+                        counter2++;
+
+                        ctx.strokeStyle = house_colour;
+                        ctx.fillStyle = house_colour;
+
+                        car_x = house_x;
+                        ctx.strokeRect(
+                            house_x,
+                            house_y,
+                            housewidth,
+                            househeight
+                        ); //rec
+                        ctx.fillRect(
+                            house_x,
+                            house_y,
+                            housewidth,
+                            househeight
+                        ); //rec
+
+                        //roof
+                        ctx.beginPath();
+                        ctx.moveTo(house_x, house_y);
+                        ctx.lineTo(house_x - 10, house_y);
+                        ctx.lineTo(house_x + housewidth / 2, house_y - 10);
+                        ctx.lineTo(house_x + housewidth + 10, house_y);
+                        ctx.closePath();
+                        ctx.stroke();
+                        ctx.fill();
+
+                        house_x += 75;
+                    }
+                });
+
+                buttons[3].addEventListener("click", function (event) {
+                    ctx.strokeStyle = car_colour;
+                    ctx.fillStyle = car_colour;
+
+                    ctx.strokeRect(car_x, car_y, carwidth, carheight);
+                    ctx.fillRect(car_x, car_y, carwidth, carheight);
+
+                    ctx.fillStyle = "#000000";
+                    ctx.beginPath();
+                    ctx.arc(
+                        car_x + wheel_rad,
+                        car_y + wheel_rad + carheight,
+                        wheel_rad,
+                        0,
+                        Math.PI * 2
+                    );
+                    ctx.closePath();
+                    ctx.fill();
+
+                    ctx.beginPath();
+                    ctx.arc(
+                        car_x + wheel_rad + (carwidth - wheel_rad * 2),
+                        car_y + wheel_rad + carheight,
+                        wheel_rad,
+                        0,
+                        Math.PI * 2
+                    );
+                    ctx.closePath();
+                    ctx.fill();
+                });
+
+                buttons[4].addEventListener("click", function (event) {
+                    ctx.strokeStyle = star_colour;
+
+                    ctx.beginPath();
+                    ctx.moveTo(star_x, star_y);
+                    ctx.lineTo(star_x + 5, star_y + 10);
+                    ctx.lineTo(star_x - 5, star_y + 5);
+                    ctx.lineTo(star_x + 5, star_y + 5);
+                    ctx.lineTo(star_x - 5, star_y + 10);
+                    ctx.closePath();
+                    ctx.stroke();
+
+                    star_x =
+                        Math.floor(Math.random() * starfield_max_x) +
+                        starfield_min_x;
+                    star_y =
+                        Math.floor(Math.random() * starfield_max_y) +
+                        starfield_min_y;
+
+                    star_colour =
+                        "rgb(" +
+                        Math.floor(Math.random() * 256) +
+                        "," +
+                        Math.floor(Math.random() * 256) +
+                        "," +
+                        Math.floor(Math.random() * 256) +
+                        ")";
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <h1>Canvas Test Bed 4</h1>
+        <canvas id="testCanvas" width="400" height="400"></canvas>
+        <br />
+        <input type="button" value="Button 1" id="1" />
+        <input type="button" value="Button 2" id="2" />
+        <input type="button" value="Button 3" id="3" />
+        <input type="button" value="Button 4" id="4" />
+    </body>
+</html>
