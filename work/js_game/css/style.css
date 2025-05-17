@@ -1,0 +1,219 @@
+/**
+ * Author: Natalia Guevara
+ * Class: CS 1XD3
+ * Date Created: 24 February 2025
+ * Date Last Modified: 26 February 2025
+ * Description: CSS for JS Assignment. Specifies at least basic design elements for a specific element.
+ */
+
+body {
+    background-color: rgb(189, 224, 255);
+    font-family: consolas;
+}
+
+#container {
+    max-width: 500px;
+    padding: 5%;
+
+    min-height: 620px;
+}
+
+h1 {
+    font-variant: small-caps;
+    font-size: 30px;
+}
+
+p {
+    font-size: 13px;
+    margin: 1%;
+}
+
+/* Start Page CSS Elements */
+
+#start_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li {
+    display: none;
+}
+
+.subheader {
+    display: flex;
+    justify-content: space-between;
+    gap: 3%;
+}
+
+#p1_name,
+#p2_name {
+    max-width: 150px;
+}
+
+#p1_colour,
+#p2_colour {
+    min-width: 100px;
+}
+
+.illegal_input {
+    border: red 2px solid;
+    display: none;
+    padding: 15px;
+}
+
+#submit {
+    margin: 5%;
+    padding: 15px;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-weight: bold;
+}
+
+/*Game Page CSS Elements*/
+#game_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    display: none;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20%;
+}
+
+#help {
+    width: 50px;
+    max-height: 50px;
+    text-align: center;
+}
+
+#ready {
+    display: none;
+    margin: 2%;
+    padding: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#feedback_fail {
+    display: none;
+}
+
+#current_points_div h4 {
+    margin-bottom: 0;
+}
+
+#turn {
+    background-color: black;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 10px;
+}
+
+#turn h1 {
+    background-color: #efefef;
+    border-radius: 5px;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#turn_points {
+    font-size: 50px;
+    margin: 3%;
+}
+
+#scores {
+    display: flex;
+    gap: 20%;
+}
+
+#scores div h3 {
+    background-color: #efefef;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#scores div {
+    background-color: black;
+    border-radius: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#buttons input {
+    margin: 3%;
+    padding: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.focus_turn {
+    border: solid 7px;
+}
+
+/* Help page CSS Elements */
+#help_page {
+    position: absolute;
+    background-color: rgb(255, 140, 32);
+    color: white;
+    max-width: 400px;
+    border-radius: 5%;
+
+    text-align: justify;
+
+    display: none;
+}
+
+#help_page div {
+    margin: 5%;
+    margin-bottom: 50px;
+}
+
+#close {
+    width: 50px;
+    max-height: 50px;
+}
+
+#help,
+#close {
+    font-weight: bolder;
+}
+
+/* Winner Page CSS Elements */
+#win_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    display: none;
+}
+
+#winner_colour {
+    padding: 20px;
+    border-radius: 10%;
+}
+
+#winner_colour h1 {
+    padding: 5px;
+    background-color: #efefef;
+    border-radius: 10%;
+}
+
+#reset {
+    margin: 5%;
+    padding: 12px;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 18px;
+    font-weight: bold;
+}

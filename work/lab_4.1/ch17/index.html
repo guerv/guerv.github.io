@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Lab 4.1: Chapter 17 Exercises</title>
+        <meta name="viewport" content="width=device-width" />
+
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                background-color: #edfbc1;
+                font-family: Arial, Helvetica, sans-serif;
+                color: #36312d;
+                margin: 20px;
+            }
+
+            #header {
+                background-color: #d5b942;
+                padding: 50px;
+                text-align: center;
+                border-radius: 20px;
+            }
+
+        </style>
+
+        <script>
+            function exercise_1() {
+                let counter = 0,
+                    sum = 0,
+                    avg = 0,
+                    abv_average_counter = 0;
+                let nums = [];
+                for (let i = 0; i < 10; i++) {
+                    nums.push(prompt("Enter a number"));
+                    sum += parseFloat(nums.at(-1));
+                    counter++;
+                }
+                avg = sum / counter;
+
+                for (let i in nums) {
+                    if (nums[i] > avg) {
+                        abv_average_counter++;
+                    }
+                }
+                alert("No. values above avg: " + abv_average_counter);
+            }
+
+            function exercise_2() {
+                let hello_str = ["Hello", "World", "!"];
+                let strings = [];
+                let index;
+                let location_indices_guess = [],
+                    found = [];
+
+                for (i in hello_str) {
+                    index = Math.floor(Math.random() * 10) + 1;
+                    strings[index] = hello_str[i];
+                }
+
+                for (let i = 0; i < 3; i++) {
+                    location_indices_guess.push(
+                        prompt(
+                            "Guess Array Locations where Strings are stored:"
+                        )
+                    );
+                    if (strings[location_indices_guess.at(-1)] !== undefined) {
+                        found.push(strings[location_indices_guess.at(-1)]);
+                    }
+                }
+
+                alert(
+                    "Score: " + found.length + "/3\nFound: " + found.toString()
+                );
+            }
+
+            function create_ball() {
+                let rnd_2 = Math.floor(Math.random() * 2) + 1;
+                let rnd_points = Math.floor(Math.random() * 101);
+                let rnd_color;
+
+                if (rnd_2 === 1) {
+                    rnd_color = "red";
+                } else {
+                    rnd_color = "white";
+                }
+
+                let lottery_ball = { color: rnd_color, points: rnd_points };
+                return lottery_ball;
+            }
+            function exercise_3() {
+                lottery_ball = create_ball();
+                alert(
+                    "Lottery Ball created\nColor: " +
+                        lottery_ball["color"] +
+                        "\nValue: " +
+                        lottery_ball["points"]
+                );
+            }
+            function exercise_4() {
+                let lottery_balls = [];
+                let index = 0;
+                let pulled_red = false;
+                let score = 0;
+                for (let i = 0; i < 100; i++) {
+                    lottery_balls[i] = create_ball();
+                }
+
+                do {
+                    do {
+                        index = prompt("Draw a ball! (Enter a number from 0-99):");
+                    } while (lottery_balls[index] === undefined);
+
+                    lottery_ball = lottery_balls[index];
+
+                    alert(
+                        "Lottery Ball pulled\nColor: " +
+                            lottery_ball["color"] +
+                            "\nValue: " +
+                            lottery_ball["points"]
+                    );
+
+                    if (lottery_ball.color === "red") {
+                        score -= lottery_ball["points"];
+                        pulled_red = true;
+                        break;
+                    } else {
+                        score += lottery_ball["points"];
+                    }
+
+                    delete lottery_balls[index];
+                } while (confirm("Continue?"));
+
+                if (pulled_red) {
+                    alert("You pulled a red ball!");
+                }
+                alert("Game over!\nTotal Score: " + score);
+            }
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <div>
+                <h1>Lottery Balls</h1>
+                <h3>Lab 4.2: Chapter 17 Exercises</h3>
+                <p><i>To access work, go into your browser's terminal and enter the appropriate functions.</i></p>
+                <ul>
+                    <li>For exercise 3: "exercise_3()"</li>
+                    <li>For exercise 4: "exercise_4()"</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

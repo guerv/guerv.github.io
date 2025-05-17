@@ -1,0 +1,184 @@
+<!--
+Author: Natalia Guevara
+Class: CS 1XD3
+Date Created: 24 February 2025
+Date Last Modified: 26 February 2025
+Description: HTML for JS Assignment. Forms the structure of what users will see.
+             Also id's many DOM elements to refer to in CSS and JS files
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pig (Dice Game)</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/script.js"></script>
+    </head>
+
+    <body>
+        <div id="container">
+            <div id="start_page">
+                <h1>Pig (Dice Game)</h1>
+                <p>
+                    Enter your <strong>name</strong> and choose your favourite
+                    <strong>colour</strong>.
+                </p>
+                <p>Game cannot start unless player names are given.</p>
+
+                <div class="player_form">
+                    <div class="subheader">
+                        <h4>P1 NAME</h4>
+                        <h4>COLOUR</h4>
+                    </div>
+                    <div class="subheader">
+                        <input
+                            type="text"
+                            placeholder="Enter P1 name..."
+                            id="p1_name"
+                        />
+                        <input type="color" value="#FF0000" id="p1_colour" />
+                    </div>
+                    <div class="illegal_input" id="illegal_input1">
+                        <li id="node1_rule0">Please enter your name.</li>
+                        <li id="node1_rule1">
+                            Only letters, hyphens, and spaces allowed.
+                        </li>
+                        <li id="node1_rule2">No names over 10 characters.</li>
+                        <li id="node1_rule3">
+                            Player names cannot be the same.
+                        </li>
+                    </div>
+                </div>
+                <div class="player_form">
+                    <div class="subheader">
+                        <h4>P2 NAME</h4>
+                        <h4>COLOUR</h4>
+                    </div>
+                    <div class="subheader">
+                        <input
+                            type="text"
+                            placeholder="Enter P2 name..."
+                            id="p2_name"
+                        />
+                        <input type="color" value="#0000FF" id="p2_colour" />
+                    </div>
+                    <div class="illegal_input" id="illegal_input2">
+                        <li id="node2_rule0">Please enter your name.</li>
+                        <li id="node2_rule1">
+                            Only letters, hyphens, and spaces allowed.
+                        </li>
+                        <li id="node2_rule2">No names over 10 characters.</li>
+                        <li id="node2_rule3">
+                            Player names cannot be the same.
+                        </li>
+                    </div>
+                </div>
+
+                <input
+                    type="button"
+                    value="SUBMIT"
+                    disabled="true"
+                    id="submit"
+                />
+            </div>
+
+            <div id="game_page">
+                <div id="help_page">
+                    <div id="header">
+                        <h1>Help</h1>
+                        <input type="button" value="X" id="close" />
+                    </div>
+
+                    <div>
+                        <p>
+                            The first player to reach a score of 100 wins the
+                            game.
+                        </p>
+                        <p>
+                            For each turn, the current player can roll or pass
+                            their turn to the other player.
+                        </p>
+                        <p>
+                            <strong>Rolling</strong> will increase the player's
+                            possible points by the die's amount. However, these
+                            possible points will be lost if the player rolls a 1
+                            and will automatically pass their turn to the other
+                            player.
+                        </p>
+                        <p>
+                            <strong>Passing</strong> will save the round's
+                            possible points to the player's score and will pass
+                            the turn to the other player. Score points cannot be
+                            lost. If a player's score reaches 100 or above, that
+                            player wins the game.
+                        </p>
+                    </div>
+                </div>
+
+                <div style="margin: 0; padding: 0">
+                    <div id="header">
+                        <div id="turn">
+                            <h1><span id="turn_name">P1</span>'s Turn</h1>
+                        </div>
+                        <input type="button" value="?" id="help" />
+                    </div>
+
+                    <div id="current_points_div">
+                        <h4>Points this Turn:</h4>
+                        <p id="turn_points">0</p>
+                    </div>
+
+                    <div id="die"><img src="images/1.png" /></div>
+
+                    <div style="margin: 0; padding: 0">
+                        <div style="display: flex; flex-direction: column">
+                            <p id="feedback_fail">
+                                Rolled a <strong>1</strong>!
+                                <i>Current Points Lost</i>.
+                            </p>
+                            <p id="feedback"></p>
+                        </div>
+                        <input type="button" value="READY" id="ready" />
+                    </div>
+
+                    <div id="buttons">
+                        <input type="button" value="ROLL" id="roll" />
+                        <input type="button" value="PASS" id="pass" />
+                    </div>
+
+                    <div id="scores">
+                        <div id="p1_score" class="focus_turn">
+                            <h3><span id="name1">P1</span>'s Score:</h3>
+                            <h3 id="score1">0</h3>
+                        </div>
+                        <div id="p2_score">
+                            <h3><span id="name2">P2</span>'s Score:</h3>
+                            <h3 id="score2">0</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="win_page">
+                <div id="winner_colour">
+                    <h1><span id="winner_name">P1</span> Wins!</h1>
+                </div>
+
+                <div>
+                    <h3>
+                        <span id="winner_name">P1</span>:
+                        <span id="winner_score"></span> points
+                    </h3>
+                    <h3>
+                        <span id="loser_name">P1</span>:
+                        <span id="loser_score"></span> points
+                    </h3>
+                </div>
+
+                <input type="button" value="Play Again?" id="reset" />
+            </div>
+        </div>
+    </body>
+</html>

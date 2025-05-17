@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chapter 27: Exercise 2</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+
+        <style type="text/css">
+            body {
+                text-align: center;
+                font-family: "Courier New", Courier, monospace;
+                background-color: #222;
+                color: #b9b9b9;
+                margin: 0px;
+            }
+
+            #container {
+                display:flex; 
+            }
+
+            h1 {
+                color: #e2543b;
+                font-variant: small-caps;
+            }
+
+            #response {
+                font-variant: small-caps;
+            }
+
+            #stats {
+                border: #e2543b solid 5px; 
+                border-radius: 20px;
+                padding: 2%;
+            }
+        </style>
+        <script>
+            class GuessingGame {
+                constructor() {
+                    this.rand_int = Math.floor(Math.random() * 20 + 1);
+                    this.guesses = 0;
+                    this.prev_guess = ""; 
+                }
+
+                guess(guess) {
+                    this.guesses++;
+
+                    if (guess === this.rand_int) {
+                        return 0; // correct
+                    } else if (guess > this.rand_int) {
+                        //num is too high
+                        return 1;
+                    }
+
+                    // num is too low
+                    else if (guess < this.rand_int) {
+                        return -1;
+                    }
+                }
+
+            }
+
+            window.addEventListener("load", function (event) {
+                let guessing_obj = new GuessingGame();
+                let submit_btn = document.getElementById("submit");
+                let guess_node = document.getElementById("guess");
+                let response_node = document.getElementById("response");
+
+                let no_guesses_span = document.getElementById("no_guesses"); 
+                let recent_guess_span = document.getElementById("recent_guess"); 
+
+                let guess = -1,ans = -1;
+                let game_over = false;
+
+                if(localStorage["guessing_obj"]) {
+                    
+                    guessing_obj_temp = JSON.parse(localStorage.guessing_obj);
+                    recent_guess_span.innerHTML = guessing_obj_temp.prev_guess; 
+                    no_guesses_span.innerHTML = guessing_obj_temp.guesses; 
+
+                    guessing_obj = new GuessingGame(); 
+                    guessing_obj.rand_int = guessing_obj_temp.rand_int;
+                    guessing_obj.guesses = guessing_obj_temp.guesses;
+                    guessing_obj.prev_guess = guessing_obj_temp.prev_guess;
+
+
+                }
+
+                submit_btn.addEventListener("click", function (event) {
+                    if (guessing_obj.guesses < 9) {
+                        guess = guess_node.value;
+                        ans = guessing_obj.guess(parseInt(guess));
+                        localStorage.guessing_obj = JSON.stringify(guessing_obj);
+
+                        no_guesses_span.innerHTML = guessing_obj.guesses; 
+
+                        if (ans === 0) {
+                            response_node.innerHTML = "Correct! New Game!";
+                            guessing_obj = new GuessingGame();
+                            no_guesses_span.innerHTML = guessing_obj.guesses; 
+
+                        } else if (ans === 1) {
+                            response_node.innerHTML = "Too high!";
+                        } else if (ans === -1) {
+                            response_node.innerHTML = "Too low!";
+                        }
+
+                        recent_guess_span.innerHTML = guessing_obj.prev_guess; 
+                        guessing_obj.prev_guess = guess; 
+
+                    } else {
+                        response_node.innerHTML =
+                            "You made 10 incorrect guesses, Game Over!";
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <h1>Guessing Game</h1>
+
+        <div id="container">
+            <div>
+                <h3>Guess the Correct Number (1-20 Inclusive)</h3>
+                <input type="text" placeholder="Guess..." id="guess" />
+                <input type="button" value="Submit" id="submit" />
+                <h4 id="response"></h4>
+            </div>
+            <div id="stats">
+                <h2>Game Stats.:</h2>
+                <p><strong>No. Guesses: </strong><span id="no_guesses"></span></p>
+                <p><strong>Most Recent Guess: </strong><span id="recent_guess"></span></p>
+            </div>
+        </div>
+    </body>
+</html>
