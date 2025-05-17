@@ -10,24 +10,24 @@ function Showcase() {
     ];
     let picsPaths = [
         [
-            "/src/assets/quatrobeat/perf.png",
-            "/src/assets/quatrobeat/miss.png",
-            "/src/assets/quatrobeat/menu.png",
-            "/src/assets/quatrobeat/editmenu.png",
-            "/src/assets/quatrobeat/editing.png",
-            "/src/assets/quatrobeat/quatrobeatTitle.png",
+            "../assets/quatrobeat/perf.png",
+            "../assets/quatrobeat/miss.png",
+            "../assets/quatrobeat/menu.png",
+            "../assets/quatrobeat/editmenu.png",
+            "../assets/quatrobeat/editing.png",
+            "../assets/quatrobeat/quatrobeatTitle.png",
         ],
         [
-            "/src/assets/paperstrings/paperstrings_demo.png",
-            "/src/assets/paperstrings/paperstrings.png",
+            "../assets/paperstrings/paperstrings_demo.png",
+            "../assets/paperstrings/paperstrings.png",
         ],
-        ["/src/assets/giftspark/figma.png"],
+        ["../assets/giftspark/figma.png"],
         [
-            "/src/assets/isofolio/site.png",
-            "/src/assets/isofolio/figma.png",
-            "/src/assets/isofolio/figmaicon.png",
+            "../assets/isofolio/site.png",
+            "../assets/isofolio/figma.png",
+            "../assets/isofolio/figmaicon.png",
         ],
-        ["/src/assets/canvas/art.png"],
+        ["../assets/canvas/art.png"],
     ];
 
     const [selectedProj, setSelectedProj] = useState(0);

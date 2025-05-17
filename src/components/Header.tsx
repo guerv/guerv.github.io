@@ -3,21 +3,20 @@ import { FaLinkedin } from "react-icons/fa";
 import { HiDocumentText } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
+import portLogo from "../assets/portLogo.png";
+import resume from "../assets/2025NataliaGuevara_resume.pdf";
+
 function Header() {
     return (
         <div id="header">
             <div>
                 <Link to="/">
-                    <img className="logo" src="/src/assets/portLogo.png" />
+                    <img className="logo" src={portLogo} />
                 </Link>
             </div>
 
             <div id="contact_info">
-                <a
-                    id="header"
-                    href="/src/assets/2025NataliaGuevara_resume.pdf"
-                    target="_blank"
-                >
+                <a id="header" href={resume} target="_blank">
                     <HiDocumentText size={24} />
                     Resumé
                 </a>
