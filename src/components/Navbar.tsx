@@ -9,6 +9,9 @@ function Navbar() {
             <Link to="/projects" className="navlink projectslink">
                 Projects
             </Link>
+            <Link to="/art" className="navlink artlink">
+                Art
+            </Link>
             <Link to="/work" className="navlink worklink">
                 WebDev Coursework
             </Link>

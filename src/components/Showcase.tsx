@@ -1,5 +1,25 @@
 import { useState } from "react";
 
+import Subheading from "../components/Subheading";
+
+import qPerf from "../assets/quatrobeat/perf.png";
+import qMiss from "../assets/quatrobeat/miss.png";
+import qMenu from "../assets/quatrobeat/menu.png";
+import qEditMenu from "../assets/quatrobeat/editmenu.png";
+import qEdit from "../assets/quatrobeat/editing.png";
+import qTitle from "../assets/quatrobeat/quatrobeatTitle.png";
+
+import pDemo from "../assets/paperstrings/paperstrings_demo.png";
+import pLogo from "../assets/paperstrings/paperstrings.png";
+
+import gFigma from "../assets/giftspark/figma.png";
+
+import iSite from "../assets/isofolio/site.png";
+import iFigma from "../assets/isofolio/figma.png";
+import iFigmaIcon from "../assets/isofolio/figmaicon.png";
+
+import cArt from "../assets/canvas/art.png";
+
 function Showcase() {
     let projects = [
         "QuatroBeat",
@@ -9,25 +29,11 @@ function Showcase() {
         "Drawing App",
     ];
     let picsPaths = [
-        [
-            "../assets/quatrobeat/perf.png",
-            "../assets/quatrobeat/miss.png",
-            "../assets/quatrobeat/menu.png",
-            "../assets/quatrobeat/editmenu.png",
-            "../assets/quatrobeat/editing.png",
-            "../assets/quatrobeat/quatrobeatTitle.png",
-        ],
-        [
-            "../assets/paperstrings/paperstrings_demo.png",
-            "../assets/paperstrings/paperstrings.png",
-        ],
-        ["../assets/giftspark/figma.png"],
-        [
-            "../assets/isofolio/site.png",
-            "../assets/isofolio/figma.png",
-            "../assets/isofolio/figmaicon.png",
-        ],
-        ["../assets/canvas/art.png"],
+        [qPerf, qMiss, qMenu, qEditMenu, qEdit, qTitle],
+        [pDemo, pLogo],
+        [gFigma],
+        [iSite, iFigma, iFigmaIcon],
+        [cArt],
     ];
 
     const [selectedProj, setSelectedProj] = useState(0);
@@ -66,7 +72,7 @@ function Showcase() {
 
     return (
         <div id="showcase-container">
-            <div className="subHeading">Showcase</div>
+            <Subheading title="Showcase" />
             <div id="showcase">
                 <ul className="project-tabs">{tabElements}</ul>
                 <div className="image-container">

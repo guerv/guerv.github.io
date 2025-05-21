@@ -94,6 +94,9 @@ a#header {
     /*border-bottom:2px solid #765b81;*/
     border-bottom: 2px solid #3b83e2;
 }
+.artlink {
+    border-bottom: 2px solid #c07d47;
+}
 .worklink {
     border-bottom: 2px solid #51c2a6;
 }
@@ -231,9 +234,6 @@ li {
     background-color: #555;
 }*/
 
-#showcase .proj0 {
-}
-
 #showcase .image-container {
     flex: 1;
     display: flex;
@@ -351,6 +351,35 @@ li {
 .gfx {
     display: flex;
     justify-content: center;
+}
+
+#art-container {
+    border-radius: 8px;
+    border: #000 4px solid;
+}
+
+.mason {
+    /* stupid */
+    padding: 12px;
+    border: solid #777 2px;
+    border-bottom: solid #444 2px;
+    border-right: solid #444 2px;
+    border-radius: 0 0 4px 4px;
+    border-top: 0px;
+}
+
+#art-bg {
+    margin: 0;
+    padding: 0;
+
+    background-color: #141414;
+}
+
+.artImage {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px #0006;
 }
 
 .skill,
