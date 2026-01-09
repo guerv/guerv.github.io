@@ -4,7 +4,7 @@ import { HiDocumentText } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 import portLogo from "../assets/portLogo.png";
-import resume from "../assets/2025NataliaGuevara_resume.pdf";
+import resume from "../assets/2026_Natalia_Guevara_resume.pdf";
 
 function Header() {
     return (
