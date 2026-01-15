@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+:root {
+  background-color: #0B0D0C;
+
+  --tw-color-primary: 229 46 0;
+}
+
+@layer theme {
+  .bg-primary { background-color: rgb(var(--tw-color-primary))}
+}
