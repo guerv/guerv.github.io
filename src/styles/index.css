@@ -1,11 +1,15 @@
 @import "tailwindcss";
-
 :root {
-  background-color: #0B0D0C;
-
+  background-color: rgb(12, 14, 13);
   --tw-color-primary: 229 46 0;
+  --tw-color-secondary: 12 14 13
+
 }
 
-@layer theme {
+@layer utilities { /** no idea why utilities work better here */
   .bg-primary { background-color: rgb(var(--tw-color-primary))}
+  .text-primary { color: rgb(var(--tw-color-primary))}
+  .border-primary { border-color: rgb(var(--tw-color-primary));}
+  
+  .bg-secondary { background-color: rgb(var(--tw-color-secondary))}
 }
