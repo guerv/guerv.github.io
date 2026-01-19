@@ -1,30 +1,26 @@
 import { useEffect, useRef, useState } from 'react'
 import typing from '@/assets/typing.svg'
-import logo from '@/assets/logo.svg'
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faAt, faAsterisk} from '@fortawesome/free-solid-svg-icons'
 import '@/App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import testImg from '@/assets/projects/TEST.png'
-import ProjectTab from '@/components/ProjectTab.tsx'
+import ProjectTab from '../components/ProjectTab.tsx'
+import Navbar from '../components/Navbar'
 import CannyBG from '@/assets/output.svg'
 
 function App() {
   const faces = ['x_x', 'o_o', 'ouo', 'q_q', 'OuO', 'T_T', ':D', ':p', '0_o', '._.'];
   const areWeFeelingEvil = true;
   const inputRef = useRef<HTMLInputElement>(null); 
-  const [face , setFace] = useState( () =>  {
-    const rand_i = Math.floor(Math.random() * faces.length); 
-    return faces[rand_i];
-  })
+  const [face , setFace] = useState<string>('')
   const [isEditingFace, setIsEditing] = useState(false); // convert to input element or text
   const [isTypingAnim, setIsTyping] = useState(true);
   const typingSpeed = 500; 
 
   const testIcons = [faGithub, faAsterisk]
 
-  const navHeaders = ["PROJECTS", "ART", "EXP."];
 
   useEffect(() => {
     if (isTypingAnim && !isEditingFace) {
@@ -94,25 +90,7 @@ function App() {
         }}
         id='header-bg'
       >
-        {/** navbar */}
-        <div
-          className='flex text-primary bg-secondary gap-3 items-center rounded-b-2xl p-4 mx-4'
-        >
-          <img className='h-[1.5em] w-auto ml-5' src={logo} />
-
-          { navHeaders.map( value  => (
-            <>
-              <FontAwesomeIcon size='xs' icon={faAsterisk} />
-              <p
-                className='text-xl'
-                key={value}
-              >
-                {value}
-              </p> 
-            </>
-            )
-          )}
-        </div>
+        <Navbar />
 
           <div className='flex items-center justify-center gap-8'>
             <div className='relative'>
