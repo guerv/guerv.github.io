@@ -73,6 +73,7 @@ function App() {
     if (!face) { // empty face
       setFace('x_x')
     }
+    setIsTyping(true)
   }
 
   return (
@@ -87,6 +88,7 @@ function App() {
           backgroundSize: 'auto', 
           backgroundPosition: 'center left',
           transition: 'background-position 0.2s',
+          height: '500px'
         }}
         id='header-bg'
       >
@@ -128,11 +130,11 @@ function App() {
               {/** Header */}
               <div className='text-right font-bold'>
                 <h1
-                  className='text-8xl'
+                  className='text-5xl md:text-8xl'
                 >
                   NATALIA
                 </h1>
-                <p className='text-5xl'>
+                <p className='text-2xl md:text-5xl'>
                   Guevara
                 </p>
               </div>
@@ -146,7 +148,7 @@ function App() {
                 >
                   <FontAwesomeIcon 
                     icon={faGithub} 
-                    size='3x'
+                    size='2xl'
                   />
                 </a>
                 
@@ -156,7 +158,7 @@ function App() {
                 >
                   <FontAwesomeIcon 
                     icon={faLinkedin} 
-                    size='3x'
+                    size='2xl'
                   />
                 </a>
 
@@ -166,7 +168,7 @@ function App() {
                 >
                   <FontAwesomeIcon 
                     icon={faAt} 
-                    size='3x'
+                    size='2xl'
                   />
                 </a>
               </div>
@@ -177,7 +179,7 @@ function App() {
       {/**Latest projects */}
       <div className='w-full p-5 text-left'>
         <h1 className='text-primary text-2xl font-semibold'>Latest Projects...</h1>
-        <div className='flex gap-5'>
+        <div className='flex flex-col md:flex-row gap-5'>
           <ProjectTab 
             thumbnailUrl={testImg} 
             name='Test'
