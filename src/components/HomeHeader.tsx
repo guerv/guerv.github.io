@@ -4,6 +4,7 @@ import '@/App.css'
 
 import Navbar from '../components/Navbar'
 import HeaderLinks from '../components/HeaderLinks'
+import Link from '../components/Link'
 import CannyBG from '@/assets/output.svg'
 
 function HomeHeader() {
@@ -96,7 +97,7 @@ function HomeHeader() {
                         </div>
                     </div>
                     <div
-                        className='absolute top-5/12  left-3/5 sm:left-1/2 -translate-x-1/2 -translate-y-1/2'
+                        className='absolute top-5/12  left-3/5 sm:left-1/2 -translate-x-2/5 -translate-y-7/12'
                         onClick={handleClick}
                     >
                         { isEditingFace ? (
@@ -131,6 +132,15 @@ function HomeHeader() {
                         Guevara
                         </p>
                     </div>
+
+                    <div className="
+                        text-right text-primary text-lg
+                        bg-secondary rounded-l-lg py-3 pl-7 pr-3
+                    ">
+                        <h3>Currently Studying <Link href='https://www.eng.mcmaster.ca/cas/degree-options/computer-science/'>CS @ McMaster</Link></h3>
+                        <h3>Seeking 2026 Summer Roles</h3>
+                    </div>
+
                     <div className='hidden md:block ml-auto'>
                         <HeaderLinks isFlexCol={false} />
                     </div>

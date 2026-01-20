@@ -15,3 +15,14 @@
   
   .bg-secondary { background-color: rgb(var(--tw-color-secondary))}
 }
+
+@layer base {
+  a {
+    color: inherit;
+    text-decoration:underline;
+    font-weight: bold;
+  }
+  a:hover {
+    filter: brightness(1.4)
+  }
+}

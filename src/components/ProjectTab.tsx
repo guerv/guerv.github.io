@@ -16,7 +16,7 @@ const ProjectTab = ({
     return (
         <div className="border-primary rounded-sm border-2 w-full h-50 overflow-hidden text-primary">
             <img src={thumbnailUrl} className="p-5 w-full h-4/5 object-cover object-center hover:blur-xs transition-all duration-200 overflow-hidden" />
-            <div className='font-bold hpx-2 flex justify-between items-center h-1/5 border-t-2 border-primary'>
+            <div className='font-bold px-2 flex justify-between items-center h-1/5 border-t-2 border-primary'>
                 <p>{name}</p>
                 <div>
                 {
