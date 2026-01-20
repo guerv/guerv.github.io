@@ -1,6 +1,8 @@
 @import "tailwindcss";
 :root {
   background-color: rgb(12, 14, 13);
+  color: rgb(12, 14, 13);
+   
   --tw-color-primary: 229 46 0;
   --tw-color-secondary: 12 14 13
 
