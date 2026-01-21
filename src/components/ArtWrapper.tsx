@@ -18,8 +18,8 @@ interface ArtWrapperState {
     images: string[];
 }
 
-class ArtWrapper extends React.Component<{},ArtWrapperState> {
-    constructor(props: {}) {
+class ArtWrapper extends React.Component<object,ArtWrapperState> {
+    constructor(props: object) {
         super(props);
         this.state = {
             images: images,
