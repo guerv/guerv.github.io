@@ -18,12 +18,12 @@ function Navbar() {
                 "
             >
                 <div className='flex gap-3 items-center mt-auto mb-1'>
-                    <img className='h-[1.5em] w-auto ml-5' src={logo} />
+                    <img className='h-[1.5em] w-auto ml-5 cursor-pointer hover:brightness-300' src={logo} />
                     { navHeaders.map( value  => (
                     <>
                         <FontAwesomeIcon size='xs' icon={faAsterisk} />
                         <p
-                            className='text-xl'
+                            className='text-xl font-bold cursor-pointer hover:brightness-300'
                             key={value}
                         >
                             {value}

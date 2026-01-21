@@ -5,9 +5,9 @@ import '@/App.css'
 import testImg from '@/assets/projects/TEST.png'
 import ProjectTab from '../components/ProjectTab.tsx'
 import HomeHeader from '../components/HomeHeader.tsx'
+import Footer from '../components/Footer.tsx'
 
-function App() {
-
+function Home() {
   const testIcons = [faGithub, faAsterisk]
 
 
@@ -15,7 +15,7 @@ function App() {
     <>
       <HomeHeader />
       {/**Latest projects */}
-      <div className='w-full p-5 text-left'>
+      <div className='flex flex-col w-full p-10 text-left gap-y-5'>
         <h1 className='text-primary text-2xl font-semibold'>Latest Projects...</h1>
         <div className='flex flex-col md:flex-row gap-5'>
           <ProjectTab 
@@ -37,21 +37,11 @@ function App() {
             icons={testIcons}
           />
         </div>
-      </div>
 
-      <div>
-        <ul className='text-2xl m-52'>
-          <li>filler</li>
-          <li>filler</li>
-          <li>filler</li>
-          <li>filler</li>
-          <li>filler</li>
-          <li>filler</li>
-          <li>filler</li>
-        </ul>
+        <Footer />
       </div>
     </>
   )
 }
 
-export default App
+export default Home;

@@ -73,6 +73,17 @@ function HomeHeader() {
 
     return(
         <>
+        {/** DISTORTION */}
+        <svg className="absolute">
+          <defs>
+            <filter id='distort'>
+              <feTurbulence baseFrequency="0.01 0.01" numOctaves="1" result="noise" />
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="7" xChannelSelector="R" yChannelSelector="R" />
+            </filter>
+          </defs>
+        </svg>
+
+
         {/** header */}
         <div 
             className='bg-primary relative overflow-hidden'
@@ -92,12 +103,12 @@ function HomeHeader() {
                 <div className='relative'>
                     <div className="flex sm:gap-10">
                         <img src={typing} />
-                        <div className='mt-auto mb-50 md:hidden'>
+                        <div className='mb-30 md:hidden'>
                             <HeaderLinks isFlexCol={true} />
                         </div>
                     </div>
                     <div
-                        className='absolute top-5/12  left-3/5 sm:left-1/2 -translate-x-2/5 -translate-y-7/12'
+                        className='absolute top-5/12 md:left-3/5 left-1/2 -translate-x-1/2 -translate-y-5/12'
                         onClick={handleClick}
                     >
                         { isEditingFace ? (
@@ -112,7 +123,6 @@ function HomeHeader() {
                         ) : (
                             <div className='text-6xl font-semibold'>
                             {face}
-                            {isTypingAnim && <span className='animate-pulse font-thin'>|</span>} 
                             </div>
                         )
                         }
@@ -135,7 +145,7 @@ function HomeHeader() {
 
                     <div className="
                         text-right text-primary text-lg
-                        bg-secondary rounded-l-lg py-3 pl-7 pr-3
+                        bg-secondary rounded-lg md:rounded-r-none py-3 pl-7 pr-3
                     ">
                         <h3>Currently Studying <Link href='https://www.eng.mcmaster.ca/cas/degree-options/computer-science/'>CS @ McMaster</Link></h3>
                         <h3>Seeking 2026 Summer Roles</h3>
