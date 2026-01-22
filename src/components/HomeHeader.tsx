@@ -144,7 +144,7 @@ function HomeHeader() {
                     </div>
 
                     <div className="
-                        text-right text-primary text-lg
+                        text-center md:text-right text-primary text-lg
                         bg-secondary rounded-lg md:rounded-r-none py-3 pl-7 pr-3
                     ">
                         <h3>Currently Studying <Link href='https://www.eng.mcmaster.ca/cas/degree-options/computer-science/'>CS @ McMaster</Link></h3>

@@ -1,6 +1,7 @@
 import { faAsterisk } from '@fortawesome/free-solid-svg-icons'
 import Navbar from '../components/Navbar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ArtWrapper from '../components/ArtWrapper';
 
 function Art() {
     return (
@@ -27,6 +28,10 @@ function Art() {
                     </div>
                 </div>
             </div>
+            <div className='mx-auto max-w-6xl p-10'>
+                <ArtWrapper />
+            </div>
+
         </>
     )
 }

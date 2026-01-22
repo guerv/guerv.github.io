@@ -1,0 +1,43 @@
+{
+    "rage_room": {
+        "tech": ["C#", "Unity"],
+        "date": "September 2025", 
+        "github-link": "https://github.com/guerv/rage-room"
+    },
+
+    "violina": {
+        "tech": ["Python", "Mediapipe", "Flask"],
+        "date": "January 2026",
+        "github-link": "https://github.com/mekaeel-m/deltahacks2026"
+    }, 
+
+    "quatrobeat": {
+        "tech": ["Java", "JavaFx"],
+        "date": "June 2024",
+        "github-link": "https://github.com/guerv/quatrobeat"
+    }, 
+
+    "portfolio": {
+        "tech": ["Vite", "React", "Typescript"],
+        "date": "January 2026", 
+        "github-link": "https://github.com/guerv/guerv.github.io"
+
+    }, 
+    "grocery_store_nightmare": {
+        "tech": ["Java", "JavaFx"], 
+        "date": "June 2023", 
+        "github-link": "https://github.com/guerv/grocery-store-nightmare"
+
+    }, 
+    "paper_strings": {
+        "tech": ["Python", "OpenCV", "Mediapipe"],
+        "date": "January 2025",
+        "github-link": "https://github.com/ameya-g-git/paper-strings"
+
+    }, 
+    "giftspark": {
+        "tech": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+        "date": "April 2025",
+        "github-link": "https://github.com/guerv/giftspark"
+    }
+}
