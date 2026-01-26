@@ -39,6 +39,22 @@
     border-top-color: var(--color-primary-600)
   }
 
+  .outline-primary {
+    outline-color: rgb(var(--tw-color-primary));
+  }
+  .outline-b-primary { 
+    border-bottom-color: var(--color-primary-600);
+  }
+  .border-l-primary {
+    border-left-color: var(--color-primary-400);
+  }
+  .border-r-primary {
+    border-right-color: var(--color-primary-500);
+  }
+  .border-t-primary {
+    /*border-top-color: var(--color-primary-300);*/
+    border-top-color: var(--color-primary-600)
+  }
   
   .bg-secondary { background-color: rgb(var(--tw-color-secondary))}
 }

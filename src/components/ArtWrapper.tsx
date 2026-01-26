@@ -63,7 +63,7 @@ class ArtWrapper extends React.Component<object,ArtWrapperState> {
 
                             <img 
                                 src={selectedImage}
-                                className='w-full h-auto rounded-md object-contain'
+                                className='rounded-md object-contain'
                             />
                         </div>
                     </div>

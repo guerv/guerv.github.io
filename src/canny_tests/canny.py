@@ -2,14 +2,13 @@ import numpy as np
 import cv2 as cv
 from matplotlib import pyplot as plt 
 import os.path
+"""
+Remember to cd into canny_tests
+"""
 
-filePath = 'images/network_tower.png'
-if os.path.exists(filePath):
-    print("Path exists")
-else: 
-    print("Path DOES NOT exist")
+filePath = './images/compressed_test1.jpg'
     
-img = cv.imread('images/network_tower.png', cv.IMREAD_GRAYSCALE)
+img = cv.imread(filePath, cv.IMREAD_GRAYSCALE)
 assert img is not None, "file not found" 
 edges = cv.Canny(img,100,200)
 contours, _ = cv.findContours(edges, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)

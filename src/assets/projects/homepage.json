@@ -1,0 +1,30 @@
+[
+    {
+        "key": "violina",
+        "name": "Violina",
+        "tech": ["Python", "Mediapipe", "Flask"],
+        "icons": ["dePython", "deFlask"],
+        "date": "January 2026",
+        "gh_link": "https://github.com/mekaeel-m/deltahacks2026",
+        "description": "Made for DeltaHacks XII - Web app that detects and processes arm joints using MediaPipe's pose detection model to check good violin posture."
+    }, 
+    {
+        "key": "rage_room",
+        "name": "Rage Room",
+        "tech": ["C#", "Unity"],
+        "icons": ["deCSharp", "deUnity"],
+        "date": "September 2025", 
+        "gh_link": "https://github.com/guerv/rage-room",
+        "description": "Uses Meta XR SDK and Unity to create a virutal \"rage room\" that allows players to destroy fragile goods in their room."
+    },
+    {
+        "key": "quatrobeat",
+        "name": "QuatroBeat",
+        "tech": ["Java", "JavaFx"],
+        "icons": ["deJava"],
+        "date": "June 2024",
+        "gh_link": "https://github.com/guerv/quatrobeat",
+        "description": "A 4-key rhythm game with four pre-made levels. Allows users to import their own songs and map their own levels.",
+        "thumbnailUrl": "src/assets/projects/thumbs/quatrobeat.png"
+    }
+]

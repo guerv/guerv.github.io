@@ -1,43 +1,72 @@
-{
-    "rage_room": {
+[
+    {
+        "key": "rage_room",
+        "name": "Rage Room",
         "tech": ["C#", "Unity"],
+        "icons": ["deCSharp", "deUnity"],
         "date": "September 2025", 
-        "github-link": "https://github.com/guerv/rage-room"
+        "gh_link": "https://github.com/guerv/rage-room",
+        "description": "Uses Meta XR SDK and Unity to create a virutal \"rage room\" that allows players to destroy fragile goods in their room."
     },
 
-    "violina": {
+    {
+        "key": "violina",
+        "name": "Violina",
         "tech": ["Python", "Mediapipe", "Flask"],
+        "icons": ["dePython", "deFlask"],
         "date": "January 2026",
-        "github-link": "https://github.com/mekaeel-m/deltahacks2026"
+        "gh_link": "https://github.com/mekaeel-m/deltahacks2026",
+        "description": "Made for DeltaHacks XII - Web app that detects and processes arm joints using MediaPipe's pose detection model to check good violin posture."
     }, 
 
-    "quatrobeat": {
+    {
+        "key": "quatrobeat",
+        "name": "QuatroBeat",
         "tech": ["Java", "JavaFx"],
+        "icons": ["deJava"],
         "date": "June 2024",
-        "github-link": "https://github.com/guerv/quatrobeat"
+        "gh_link": "https://github.com/guerv/quatrobeat",
+        "description": "A 4-key rhythm game with four pre-made levels. Allows users to import their own songs and map their own levels.",
+        "thumbnailUrl": "src/assets/projects/thumbs/quatrobeat.png"
     }, 
 
-    "portfolio": {
+    {
+        "key": "portfolio",
+        "name": "My Website",
         "tech": ["Vite", "React", "Typescript"],
+        "icons": ["deViteJS", "deReact", "deTypeScript"],
         "date": "January 2026", 
-        "github-link": "https://github.com/guerv/guerv.github.io"
-
+        "gh_link": "https://github.com/guerv/guerv.github.io",
+        "description": "My personal website. You're looking at version 2!"
     }, 
-    "grocery_store_nightmare": {
-        "tech": ["Java", "JavaFx"], 
+    {
+        "key": "gsn",
+        "name": "Grocery Store Nightmare",
+        "tech": ["Java"],
+        "icons": ["deJava"],
         "date": "June 2023", 
-        "github-link": "https://github.com/guerv/grocery-store-nightmare"
-
+        "gh_link": "https://github.com/guerv/grocery-store-nightmare",
+        "description": "A primitive \"The Binding of Isaac\" copy with stat upgrades, walking enemies, primitive room traversal, and player bullets.",
+        "thumbnailUrl": "src/assets/projects/thumbs/gsn_title.png"
     }, 
-    "paper_strings": {
+    {
+        "key": "paper_strings",
+        "name": "Paper Strings",
         "tech": ["Python", "OpenCV", "Mediapipe"],
+        "icons": ["dePython", "deOpenCV"],
         "date": "January 2025",
-        "github-link": "https://github.com/ameya-g-git/paper-strings"
-
+        "gh_link": "https://github.com/ameya-g-git/paper-strings",
+        "description": "TODO",
+        "thumbnailUrl": "src/assets/projects/thumbs/paperstrings.png"
     }, 
-    "giftspark": {
+    {
+        "key": "giftspark",
+        "name": "GiftSpark",
         "tech": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+        "icons": ["deHTML5", "deCSS3", "deJavaScript", "dePHP", "deMySQL"],
         "date": "April 2025",
-        "github-link": "https://github.com/guerv/giftspark"
+        "gh_link": "https://github.com/guerv/giftspark",
+        "description": "TODO",
+        "thumbnailUrl": "src/assets/projects/thumbs/giftspark.png"
     }
-}
+]
