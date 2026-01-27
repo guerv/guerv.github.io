@@ -16,7 +16,8 @@
         "icons": ["dePython", "deFlask"],
         "date": "January 2026",
         "gh_link": "https://github.com/mekaeel-m/deltahacks2026",
-        "description": "Made for DeltaHacks XII - Web app that detects and processes arm joints using MediaPipe's pose detection model to check good violin posture."
+        "description": "Made for DeltaHacks XII - Web app that detects and processes arm joints using MediaPipe's pose detection model to check good violin posture.",
+        "thumbnailUrl": "src/assets/projects/thumbs/violina.png"
     }, 
 
     {
@@ -26,7 +27,7 @@
         "icons": ["deJava"],
         "date": "June 2024",
         "gh_link": "https://github.com/guerv/quatrobeat",
-        "description": "A 4-key rhythm game with four pre-made levels. Allows users to import their own songs and map their own levels.",
+        "description": "A 4-key rhythm game with four pre-made levels. Allows users to import their own songs and map their own levels. Built in 2 weeks for a high school project.",
         "thumbnailUrl": "src/assets/projects/thumbs/quatrobeat.png"
     }, 
 
@@ -46,17 +47,17 @@
         "icons": ["deJava"],
         "date": "June 2023", 
         "gh_link": "https://github.com/guerv/grocery-store-nightmare",
-        "description": "A primitive \"The Binding of Isaac\" copy with stat upgrades, walking enemies, primitive room traversal, and player bullets.",
-        "thumbnailUrl": "src/assets/projects/thumbs/gsn_title.png"
+        "description": "A primitive \"The Binding of Isaac\" copy with stat upgrades, walking enemies, primitive room traversal, and player bullets. Built in 2 weeks for a high school project.",
+        "thumbnailUrl": "src/assets/projects/thumbs/gsn_play2.png"
     }, 
     {
         "key": "paper_strings",
         "name": "Paper Strings",
         "tech": ["Python", "OpenCV", "Mediapipe"],
-        "icons": ["dePython", "deOpenCV"],
+        "icons": ["dePython", "deOpenCV", "deKeras"],
         "date": "January 2025",
         "gh_link": "https://github.com/ameya-g-git/paper-strings",
-        "description": "TODO",
+        "description": "Made for DeltaHacks XI - Uses your webcam to detect and feed hand joint data to a trained Keras model, returning its guess for the guitar chord hand shape the hand forms. Play the currently detected guitar chord by strumming.",
         "thumbnailUrl": "src/assets/projects/thumbs/paperstrings.png"
     }, 
     {
@@ -66,7 +67,7 @@
         "icons": ["deHTML5", "deCSS3", "deJavaScript", "dePHP", "deMySQL"],
         "date": "April 2025",
         "gh_link": "https://github.com/guerv/giftspark",
-        "description": "TODO",
+        "description": "A full stack web app meant for planning birthdays! List details of your loved ones birthdays and get reminders for each as they approach. Built as a final group project for CS1XD3.",
         "thumbnailUrl": "src/assets/projects/thumbs/giftspark.png"
     }
 ]

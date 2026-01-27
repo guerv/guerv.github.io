@@ -4,6 +4,7 @@ import { faAsterisk } from "@fortawesome/free-solid-svg-icons";
 import projectsInfo from "../assets/projects/info.json"
 import ProjectTab from "../components/ProjectTab";
 import {iconMap} from "../utils/icons";
+import Container from "../components/Container";
 
 interface Project {
     key: string;
@@ -28,7 +29,7 @@ function Projects() {
                     <div className="flex gap-x-4 items-center justify-center">
                         <FontAwesomeIcon icon={faAsterisk} size='lg' className='animate-spin' />
                         <h1
-                            className="text-5xl"
+                            className="text-5xl font-daysone"
                         >
                             PROJECTS
                         </h1>
@@ -37,7 +38,7 @@ function Projects() {
                 </div>
             </div>
 
-            <div className="flex flex-col m-10 gap-10">
+            <Container>
                 <span className="w-full text-primary text-left text-sm">
                     Below are a few projects I've worked on! Click on a project to redirect to its GitHub repository.
                 </span>
@@ -55,7 +56,7 @@ function Projects() {
                     ))
                 }
                 </div>
-            </div>
+            </Container>
 
         </>
     )

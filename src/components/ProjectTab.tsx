@@ -71,7 +71,7 @@ const ProjectTab = ({
                 </div>
             <div className='p-2'>
                 <div className='font-bold flex justify-between items-center text-lg'>
-                    <p className='text-2xl'>{name}</p>
+                    <p className='text-2xl font-daysone'>{name}</p>
                 </div>
                 <p className='text-left text-xs italic'>{description}</p>
             </div>

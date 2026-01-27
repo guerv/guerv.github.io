@@ -5,6 +5,11 @@ export default {
                 primary: {
                     500: 'var(--color-primary-500)'
                 }
+            },
+            fontFamily: {
+                daysone: [
+                    'DaysOne',
+                ]
             }
         }
     }

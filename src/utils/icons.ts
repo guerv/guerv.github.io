@@ -12,6 +12,7 @@ import dePHP from "@devicon/react/php/plain";
 import deJavaScript from "@devicon/react/JavaScript/plain";
 import deMySQL from "@devicon/react/mysql/plain-wordmark";
 import deOpenCV from "@devicon/react/opencv/plain";
+import deKeras from "@devicon/react/keras/plain";
 
 export const iconMap: Record<string, typeof deCSharp> = {
     deCSharp,
@@ -28,4 +29,5 @@ export const iconMap: Record<string, typeof deCSharp> = {
     deJavaScript,
     deMySQL,
     deOpenCV,
+    deKeras
 };

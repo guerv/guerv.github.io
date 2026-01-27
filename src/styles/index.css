@@ -1,3 +1,9 @@
+@font-face {
+  font-family: DaysOne;
+  src: url("../assets/fonts/DaysOne/DaysOne-Regular.ttf");
+  font-display:swap;
+}
+
 @import "tailwindcss";
 :root {
   background-color: rgb(12, 14, 13);
@@ -68,4 +74,8 @@
   a:hover {
     filter: brightness(1.4)
   }
+}
+
+@theme {
+  --font-daysone: DaysOne, "sans-serif";
 }

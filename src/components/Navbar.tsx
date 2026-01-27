@@ -4,7 +4,7 @@ import { faAsterisk} from '@fortawesome/free-solid-svg-icons'
 import { useEffect } from 'react';
 
 function Navbar() {
-    const navHeaders = ["PROJECTS", "ART", "EXP."];
+    const navHeaders = ["PROJECTS", "ART"];
     const navLinks = ["/projects", "/art", "/experience"];
     
     // svg disturbance interval 

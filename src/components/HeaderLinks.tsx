@@ -19,6 +19,7 @@ function HeaderLinks({isFlexCol} : LinksProps) {
                 <a
                 href='https://github.com/guerv'
                 target='_blank'
+                rel="noopener noreferrer"
                 >
                 <FontAwesomeIcon 
                     icon={faGithub} 
@@ -27,8 +28,9 @@ function HeaderLinks({isFlexCol} : LinksProps) {
                 </a>
                 
                 <a
-                href='www.linkedin.com/in/natalia-guevara-47753a2a0'
+                href='https://www.linkedin.com/in/natalia-guevara-47753a2a0'
                 target='_blank'
+                rel="noopener noreferrer"
                 >
                 <FontAwesomeIcon 
                     icon={faLinkedin} 
@@ -39,6 +41,7 @@ function HeaderLinks({isFlexCol} : LinksProps) {
                 <a
                 href='mailto:guevaran@mcmaster.ca'
                 target='_blank'
+                rel="noopener noreferrer"
                 >
                 <FontAwesomeIcon 
                     icon={faAt} 

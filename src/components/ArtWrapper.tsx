@@ -39,35 +39,9 @@ class ArtWrapper extends React.Component<object,ArtWrapperState> {
     }
     
     render() {
-        const { images, selectedImage } = this.state; 
+        const { images } = this.state; 
         return (
             <>
-                {/** Blur */} 
-                {selectedImage && (
-                    <div 
-                        className='fixed inset-0 bg-black/50 backdrop-blur-sm z-40'
-                        onClick={this.handleClose}
-                    />
-                )}
-
-                {/** Modal */} 
-                {selectedImage && (
-                    <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
-                        <div className='relative max-w-4xl max-h-[90vh] flex flex-col'>
-                            <button 
-                                onClick={this.handleClose}
-                                className="absolute top-4 left-4 bg-secondary text-primary p-3 rounded-full hover:bg-opacity-80 transition"
-                            >  
-                                <FontAwesomeIcon icon={faArrowLeft} size='lg' />
-                            </button>
-
-                            <img 
-                                src={selectedImage}
-                                className='rounded-md object-contain'
-                            />
-                        </div>
-                    </div>
-                )}
 
                 <ResponsiveMasonry
                     columnsCountBreakPoints={{50:1, 300:2, 900:3}}
@@ -78,7 +52,7 @@ class ArtWrapper extends React.Component<object,ArtWrapperState> {
                                 <img
                                     key={index}
                                     src={image}
-                                    className='rounded-md cursor-pointer hover:opacity-80 transition'
+                                    className='rounded-md transition'
                                     onClick={() => this.handleImageClick(image)}
                                 />
                             ))
