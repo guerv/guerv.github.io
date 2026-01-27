@@ -1,5 +1,4 @@
 import '@/App.css'
-import testImg from '@/assets/projects/TEST.png';
 import {iconMap} from '../utils/icons'
 import nullImage from '@/assets/noImage.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
