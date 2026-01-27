@@ -8,6 +8,7 @@ import homeProjectsInfo from "../assets/projects/homepage.json";
 import Container from '../components/Container.tsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 interface Project {
     key: string;
@@ -59,11 +60,11 @@ function Home() {
               ))
             }
           </div>
-          <a href='/projects' rel='noopener noreferrer'
+          <Link to='/projects' rel='noopener noreferrer'
               className='cursor-pointer flex gap-1 text-primary items-center ml-auto hover:animate-pulse no-underline'>
             <FontAwesomeIcon icon={faArrowRight} />
             <span>See More!</span>
-          </a>
+          </Link>
         </div>
         <Footer />
       </Container>

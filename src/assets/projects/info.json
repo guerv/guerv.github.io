@@ -28,7 +28,7 @@
         "date": "June 2024",
         "gh_link": "https://github.com/guerv/quatrobeat",
         "description": "A 4-key rhythm game with four pre-made levels. Allows users to import their own songs and map their own levels. Built in 2 weeks for a high school project.",
-        "thumbnailUrl": "src/assets/projects/thumbs/quatrobeat.png"
+        "thumbnailUrl": "../assets/projects/thumbs/quatrobeat.png"
     }, 
 
     {

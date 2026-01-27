@@ -2,10 +2,11 @@ import logo from '../../public/logo.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAsterisk} from '@fortawesome/free-solid-svg-icons'
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     const navHeaders = ["PROJECTS", "ART"];
-    const navLinks = ["/projects", "/art", "/experience"];
+    const navLinks = ["/projects", "/art"];
     
     // svg disturbance interval 
     useEffect(() => {
@@ -33,20 +34,20 @@ function Navbar() {
                 "
             >
                 <div className='flex gap-3 items-center mt-auto mb-1'>
-                    <a href='/'>
+                    <Link to='/'>
                         <img className='h-[1.5em] w-auto ml-5 cursor-pointer hover:brightness-300' src={logo} />
-                    </a>
+                    </Link>
                     { navHeaders.map( (value, index)  => (
                     <>
                         <FontAwesomeIcon size='xs' icon={faAsterisk} />
-                        <a  className='no-underline' href={navLinks[index]}>
+                        <Link  className='no-underline' to={navLinks[index]}>
                             <p
                                 className='text-xl font-bold cursor-pointer hover:brightness-300'
                                 key={value}
                             >
                                 {value}
                             </p> 
-                        </a>
+                        </Link>
                     </>
                     ))}
                 </div>
