@@ -1,4 +1,4 @@
-import logo from '@/assets/logo.svg'
+import logo from '../../public/logo.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAsterisk} from '@fortawesome/free-solid-svg-icons'
 import { useEffect } from 'react';
