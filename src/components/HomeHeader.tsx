@@ -11,32 +11,32 @@ function HomeHeader() {
   const faces = ['x_x', 'o_o', 'ouo', 'q_q', 'OuO', 'T_T', ':D', ':p', '0_o', '._.'];
   const kaomojis = ["ᗒᗣᗕ", "๑❛ڡ❛๑", "ಠ۾ಠ", "´°ω°`", "ಠ_ಠ", "°□°"];
   const setImg = true;
-  const inputRef = useRef<HTMLInputElement>(null); 
+  const inputRef = useRef<HTMLInputElement>(null);
   const [face , setFace] = useState<string>('')
   const [isEditingFace, setIsEditing] = useState(false); // convert to input element or text
   const [isTypingAnim, setIsTyping] = useState(true);
-  const typingSpeed = 250; 
+  const typingSpeed = 250;
 
   useEffect(() => {
     if (isTypingAnim && !isEditingFace) {
       let cur_index = 0;
       let fullFace = kaomojis[Math.floor(Math.random() * kaomojis.length)]
       let isDeleting = false;
-      
+
       const typingInterval = setInterval( () => {
           if (!isDeleting && cur_index <= fullFace.length) {
             setFace(fullFace.slice(0, cur_index)) ;
-            cur_index ++; 
+            cur_index ++;
           } else if(!isDeleting && cur_index > fullFace.length) {
             isDeleting = true; // keeping this clause pauses typing at full face
           } else if (isDeleting && 0 < cur_index)  {
-            setFace(fullFace.slice(0,cur_index)); 
-            cur_index --; 
+            setFace(fullFace.slice(0,cur_index));
+            cur_index --;
             if (cur_index === 0) {
               isDeleting = false;
-              fullFace = kaomojis[Math.floor(Math.random() * kaomojis.length)] 
+              fullFace = kaomojis[Math.floor(Math.random() * kaomojis.length)]
             }
-          } 
+          }
       }, typingSpeed);
 
       return () => clearInterval(typingInterval);
@@ -54,8 +54,8 @@ function HomeHeader() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
-  // svg disturbance interval 
+
+  // svg disturbance interval
   useEffect(() => {
     const interval = setInterval(() => {
       const x = 0.01 + Math.random() * 0.002;
@@ -98,12 +98,12 @@ function HomeHeader() {
 
 
         {/** header */}
-        <div 
+        <div
             className='bg-primary relative overflow-hidden'
             style={{
             backgroundImage: `url(${CannyBG})`,
             backgroundRepeat: 'no-repeat',
-            backgroundSize: 'auto', 
+            backgroundSize: 'auto',
             backgroundPosition: 'center left',
             transition: 'background-position 0.2s',
             height: '500px'
@@ -144,14 +144,14 @@ function HomeHeader() {
                         onClick={handleClick}
                     >
                         { isEditingFace ? (
-                        <input 
+                        <input
                             ref={inputRef}
                             type='text'
                             value={face}
                             onChange={(e) => setFace(e.target.value)}
                             onBlur={handleBlur} // lost focus
                             className='bg-transparent border-none outline-none text-center text-6xl font-semibold whitespace-nowrap'
-                        /> 
+                        />
                         ) : (
                             <div className='text-6xl font-semibold'>
                             {face}
@@ -180,7 +180,7 @@ function HomeHeader() {
                         bg-secondary rounded-lg md:rounded-r-none py-3 pl-7 pr-3
                     ">
                         <h3>Currently Studying <Link href='https://www.eng.mcmaster.ca/cas/degree-options/computer-science/'>CS @ McMaster</Link></h3>
-                        <h3>Seeking 2026 Summer Roles</h3>
+                        <h3>Seeking 2026 Fall Roles</h3>
                     </div>
 
                     <div className='hidden md:block ml-auto'>

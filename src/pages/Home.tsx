@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 
 interface Project {
     key: string;
-    name: string; 
+    name: string;
     icons:string[];
     date: string;
     gh_link?: string;
@@ -27,10 +27,9 @@ function Home() {
 
       <HomeHeader />
       <Container>
-        <div className='flex items-center gap-x-3'>
-          <div className='bg-primary rounded flex flex-col p-7 text-sm md:text-md text-shadow-sm font-mono gap-y-4 w-3/5 md:w-4/5'>
-            <span>Hi! Welcome to my website. It'll be frequently updated, so come back often to see any new changes!</span>
-            <span>I got into programming because of how mystical it was to me. That same mentality led me to exploring <strong>game-dev, web-dev, hardware, and computer vision</strong>. Needless to say, I'm always eager to expand my skillset!</span>
+        <div className='flex items-center gap-x-3 md:hidden'>
+          <div className='bg-primary rounded flex flex-col p-7 text-sm md:text-md md:text-right text-shadow-sm font-mono gap-y-4 w-fit ml-auto'>
+            <span>Welcome to my website. I hope you enjoy your stay!</span>
           </div>
           <svg filter="url(#distort)" width="220" height="192" viewBox="0 0 220 192" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M109.477 148.166C66.477 164.576 38.977 146.576 28.477 124.076C27.477 110.076 29.477 80.2423 30.977 72.0756C34.977 56.0756 42.977 52.0756 57.5203 42.0756C55.5832 69.4212 70.5335 81.8539 80.9769 87.0756C75.3769 73.4756 77.6436 57.5756 79.9769 52.5756C89.5769 64.5756 113.31 68.9089 123.477 69.5756C117.477 121.576 111.477 146.076 97.4769 185.576C127.477 162.376 140.31 140.909 142.977 133.076C146.477 142.076 147.977 156.576 147.977 160.576C164.777 132.976 164.644 94.7423 161.977 77.0756L178.977 83.0756C171.477 61.5756 154.144 43.0756 146.977 38.5756C150.477 35.5756 154.477 34.5756 158.477 35.5756C131.477 8.07561 80.9769 5.57561 62.4769 19.0756C66.4769 9.07562 72.477 5.07562 74.477 3.07562C57.5203 6.07562 49.6436 15.0756 48.4769 18.5756L41.4769 13.5756C34.6769 21.1756 35.6436 31.4089 36.9769 35.5756C9.97699 54.0756 -2.523 102.076 3.47697 139.576C6.47699 132.576 8.97699 128.576 14.477 125.076C13.677 149.076 20.8103 170.409 24.477 178.076C27.477 160.576 37.1437 145.382 41.977 141.882" stroke="#E52E00" stroke-width="4"/>
